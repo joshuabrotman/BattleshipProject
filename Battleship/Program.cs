@@ -16,6 +16,9 @@ namespace Battleship
             Battle NewGame = new Battle();
             NewGame.Start();
 
+            while (true) {
+                Console.WriteLine(Console.CursorLeft(), Console.CursorTop())
+                    }
 
             
         }

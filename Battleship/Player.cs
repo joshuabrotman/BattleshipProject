@@ -6,7 +6,54 @@ using System.Threading.Tasks;
 
 namespace Battleship
 {
-    class Player
+
+   
+
+    public abstract class Player
     {
+        int[] battleship = new int[3];
+        int[] carrier = new int[3];
+        int[] destroyer = new int[3];
+        int[] submarine = new int[3];
+
+
+        public void DrawShip(int[] coords)
+        {
+            Console.SetCursorPosition(coords[0] + 7,coords[1]+2);
+            Console.Write("█");
+
+        }
+
+
+
+        public void SetBattleshipLocation(int[] coords,int rotation)
+        {
+            battleship[0] = coords[0];
+            battleship[1] = coords[1];
+            battleship[2] = rotation;
+
+        }
+
+        public void SetDestroyerLocation(int[] coords, int rotation)
+        {
+            destroyer[0] = coords[0];
+            destroyer[1] = coords[1];
+            destroyer[2] = rotation;
+
+        }
+
+        public void SetCarrierLocation(int[] coords, int rotation)
+        {
+            carrier[0] = coords[0];
+            carrier[1] = coords[1];
+            carrier[2] = rotation;
+        }
+
+        public void SetSubmarineLocation(int[] coords, int rotation)
+        {
+            submarine[0] = coords[0];
+            submarine[1] = coords[1];
+            submarine[2] = rotation;
+        }
     }
 }

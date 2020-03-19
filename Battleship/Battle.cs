@@ -25,9 +25,11 @@ namespace Battleship
         public void Start()
         {
             Console.SetWindowSize(100, 56);
+            Console.SetWindowPosition(0, 0);
             Board Board1 = new Board();
             Board1.DrawBoard(2, 1);
             Board1.DrawBoard(2, 26);
+            Board1.SetShipLocations();
             Console.ReadKey();
         }
         
