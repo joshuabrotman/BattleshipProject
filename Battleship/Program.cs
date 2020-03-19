@@ -10,6 +10,17 @@ namespace Battleship
     {
         static void Main(string[] args)
         {
+
+
+            //begin battle
+            Battle NewGame = new Battle();
+            NewGame.Start();
+
+
+            
         }
+
+
+        
     }
 }
