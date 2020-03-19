@@ -25,72 +25,73 @@ namespace Battleship
         public int[] ConvertCoords(string userInput)
         {
             int[] convertedCoords = new int[2];
-            string firstCoord = userInput.Substring(0, 0).ToLower();
-            string secondCoord = userInput.Substring(1, 1);
+            string firstCoord = userInput.Substring(1);
+            string secondCoord = userInput.Substring(0, 1).ToLower();
 
-            convertedCoords[1] = Convert.ToInt32(secondCoord);
 
-            switch (firstCoord)
+            convertedCoords[0] = Convert.ToInt32(firstCoord)*3;
+
+            switch (secondCoord)
             {
                 case "a":
-                    convertedCoords[0] = 0;
+                    convertedCoords[1] = 0;
                     break;
                 case "b":
-                    convertedCoords[0] = 1;
+                    convertedCoords[1] = 1;
                     break;
                 case "c":
-                    convertedCoords[0] = 2;
+                    convertedCoords[1] = 2;
                     break;
                 case "d":
-                    convertedCoords[0] = 3;
+                    convertedCoords[1] = 3;
                     break;
                 case "e":
-                    convertedCoords[0] = 4;
+                    convertedCoords[1] = 4;
                     break;
                 case "f":
-                    convertedCoords[0] = 5;
+                    convertedCoords[1] = 5;
                     break;
                 case "g":
-                    convertedCoords[0] = 6;
+                    convertedCoords[1] = 6;
                     break;
                 case "h":
-                    convertedCoords[0] = 7;
+                    convertedCoords[1] = 7;
                     break;
                 case "i":
-                    convertedCoords[0] = 8;
+                    convertedCoords[1] = 8;
                     break;
                 case "j":
-                    convertedCoords[0] = 9;
+                    convertedCoords[1] = 9;
                     break;
                 case "k":
-                    convertedCoords[0] = 10;
+                    convertedCoords[1] = 10;
                     break;
                 case "l":
-                    convertedCoords[0] = 11;
+                    convertedCoords[1] = 11;
                     break;
                 case "m":
-                    convertedCoords[0] = 12;
+                    convertedCoords[1] = 12;
                     break;
                 case "n":
-                    convertedCoords[0] = 13;
+                    convertedCoords[1] = 13;
                     break;
                 case "o":
-                    convertedCoords[0] = 14;
+                    convertedCoords[1] = 14;
                     break;
                 case "p":
-                    convertedCoords[0] = 15;
+                    convertedCoords[1] = 15;
                     break;
                 case "q":
-                    convertedCoords[0] = 16;
+                    convertedCoords[1] = 16;
                     break;
                 case "r":
-                    convertedCoords[0] = 17;
+                    convertedCoords[1] = 17;
                     break;
                 case "s":
-                    convertedCoords[0] = 18;
+                    convertedCoords[1] = 18;
                     break;
                 case "t":
-                    convertedCoords[0] = 19;
+                    convertedCoords[1] = 19;
                     break;
             }
             Console.SetCursorPosition(67, 2);
@@ -116,7 +117,7 @@ namespace Battleship
             Console.SetCursorPosition(67, 26);
             Console.WriteLine("                         ");
 
-            FirstPlayer.DrawShip(ConvertCoords(userInput));
+            FirstPlayer.DrawDestroyer(ConvertCoords(userInput));
             
             //enter Sub
             Console.SetCursorPosition(67, 25);
@@ -127,6 +128,8 @@ namespace Battleship
             Console.SetCursorPosition(67, 26);
             Console.WriteLine("                         ");
 
+            FirstPlayer.DrawSubmarine(ConvertCoords(userInput));
+
             //enter Battleship
             Console.SetCursorPosition(67, 25);
             Console.WriteLine("Enter Battleship Coords:");
@@ -136,6 +139,8 @@ namespace Battleship
             Console.SetCursorPosition(67, 26);
             Console.WriteLine("                         ");
 
+            FirstPlayer.DrawBattleship(ConvertCoords(userInput));
+
             //enter Carrier
             Console.SetCursorPosition(67, 25);
             Console.WriteLine("Enter Carrier Coords:   ");
@@ -144,6 +149,8 @@ namespace Battleship
             FirstPlayer.SetCarrierLocation(ConvertCoords(userInput), 0);
             Console.SetCursorPosition(67, 26);
             Console.WriteLine("                         ");
+
+            FirstPlayer.DrawCarrier(ConvertCoords(userInput));
         }
         public void DrawBoard(int x, int y)
         {

@@ -17,13 +17,51 @@ namespace Battleship
         int[] submarine = new int[3];
 
 
-        public void DrawShip(int[] coords)
+        public void DrawBattleship(int[] coords)
         {
-            Console.SetCursorPosition(coords[0] + 7,coords[1]+2);
+            Console.SetCursorPosition(coords[0] + 7,coords[1]+3);
+            Console.Write("█");
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 4);
+            Console.Write("█");
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 5);
+            Console.Write("█");
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 6);
+            Console.Write("█");
+        }
+
+        public void DrawCarrier(int[] coords)
+        {
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 3);
+            Console.Write("█");
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 4);
+            Console.Write("█");
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 5);
+            Console.Write("█");
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 6);
+            Console.Write("█"); 
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 7);
+            Console.Write("█");
+        }
+
+        public void DrawDestroyer(int[] coords)
+        {
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 3);
+            Console.Write("█"); 
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 4);
             Console.Write("█");
 
         }
 
+        public void DrawSubmarine(int[] coords)
+        {
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 3);
+            Console.Write("█");
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 4);
+            Console.Write("█");
+            Console.SetCursorPosition(coords[0] + 7, coords[1] + 5);
+            Console.Write("█");
+
+        }
 
 
         public void SetBattleshipLocation(int[] coords,int rotation)

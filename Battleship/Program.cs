@@ -11,16 +11,10 @@ namespace Battleship
         static void Main(string[] args)
         {
 
-
             //begin battle
             Battle NewGame = new Battle();
             NewGame.Start();
 
-            while (true) {
-                Console.WriteLine(Console.CursorLeft(), Console.CursorTop())
-                    }
-
-            
         }
 
 
